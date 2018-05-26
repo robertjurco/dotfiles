@@ -40,8 +40,8 @@ class ConsoleMenu {
 int main() {
 	system("reset");
 	bool yes = false;
-    	//ConsoleMenu menu("Are you sure you want to shutdown?\n", "Invalid operation; ", "> ", {
-    	ConsoleMenu menu("Are you sure you want to reboot?\n", "Invalid operation; ", "> ", {
+    	ConsoleMenu menu("Are you sure you want to shutdown?\n", "Invalid operation; ", "> ", {
+    	//ConsoleMenu menu("Are you sure you want to reboot?\n", "Invalid operation; ", "> ", {
     	//ConsoleMenu menu("Are you sure you want to leave i3?\n", "Invalid operation; ", "> ", {
       		{"yes", [&yes] {
         		yes = true;
@@ -52,8 +52,8 @@ int main() {
     	});
     	menu.use();
 	if (yes==true){
-	//system("poweroff");
-	system("reboot");
+	system("poweroff");
+	//system("reboot");
 	//system("i3 exit");
 	}
   }
